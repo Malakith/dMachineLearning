@@ -1,0 +1,52 @@
+
+\documentclass[a4paper,10pt,article,oneside,english]{memoir} 
+% DANSK OPSÆTNING
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} 
+\renewcommand{\englishhyphenmins}{22} 
+
+
+% FIGURER
+\usepackage{graphicx}
+
+% MATEMATIK
+\usepackage{amsmath}
+\usepackage{amssymb,amsthm,bm}
+\usepackage{mathtools}	
+
+
+\begin{document}
+%\frontmatter
+%\clearpage	
+%\tableofcontents*
+	\title{Machine Learning E16 - Handin 2\\OCR with SVM and (Deep) Neural Nets}
+	\author{Mark Medum Bundgaard, Morten Jensen, Martin Sand Nielsen\\ Aarhus University}
+	\date{\today}
+	
+	\mainmatter
+	\maketitle
+	
+	
+\chapter{SVM with SciKit-Learn}
+-describe which kernels we have tried
+-include graphs for accuracy vs. C-value for various kernels
+-include graph for accuracy for C- vs gamma-value grid
+-should we measure or mention training time?
+- results (in table?)
+
+\chapter{Convolutional Neural Nets with TensorFlow}
+- include illustration of network
+- training time
+- results
+
+\chapter{Making the best classifier in 2016 ML Class}
+- describe image augmentation (or what we have done to achieve better data for training)
+- illustrate network
+- results
+
+
+
+	
+\end{document}
