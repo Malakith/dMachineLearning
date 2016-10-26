@@ -1,6 +1,8 @@
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
+audigits_format = mnist_format.reshape(-1, 28, 28).transpose(1, 0, 2)
+
 
 
 sess = tf.InteractiveSession()
