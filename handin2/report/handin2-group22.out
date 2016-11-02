@@ -2,4 +2,8 @@
 \BOOKMARK [1][-]{section.1.1}{Polynomial kernels}{chapter.1}% 2
 \BOOKMARK [1][-]{section.1.2}{RBF kernel}{chapter.1}% 3
 \BOOKMARK [0][-]{chapter.2}{Neural Nets with TensorFlow}{}% 4
-\BOOKMARK [0][-]{chapter.3}{Making the best classifier in 2016 ML Class}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Improved \(combined\) training set}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Training}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{Making the best classifier in 2016 ML Class}{}% 7
+\BOOKMARK [1][-]{section.3.1}{Training}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{Hyperparameters}{chapter.3}% 9
