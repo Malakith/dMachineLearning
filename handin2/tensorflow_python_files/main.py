@@ -55,7 +55,7 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
         with tf.Session() as session:
             session.run(init_op, feed_dict=feed_dict)
             if cont > 0:
-                saver.restore(sess=session, save_path=filename + "_step_" + str(step))
+                saver.restore(sess=session, save_path=filename + "_step_" + str(cont))
 
             coord = tf.train.Coordinator()
             threads = tf.train.start_queue_runners(sess=session, coord=coord)
@@ -65,19 +65,21 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
                     _, loss_value = session.run(train_op)
                     print("\rCompleted step " + str(step), end="")
                     if step % 100 == 0:
+                        saver.save(session, filename + "_step_" + str(step))
                         eval_value = session.run(eval_op, feed_dict={keep_prop_ph: 1.0})
                         in_sample_acc = (eval_value/batch_size)*100
                         percent_done = (step / max_step) * 100.0
-                        pred = session.run(pred_op, feed_dict={images_ph: images_test})
-                        out_of_sample_eval = session.run(eval_op, feed_dict={images_ph: images_test, labels_ph:one_hot(labels_test), keep_prop_ph: 1.0})
-                        out_of_sample_acc = out_of_sample_eval/batch_size
+                        pred = predict(images_test, step)
+                        out_of_sample_acc = (np.sum(pred == labels_test)/images_test.shape[0])*100
                         print("\rCompleted %.2f percent / %d steps. \n"
-                              "In sample accuracy is %.2f and loss is %.4f.\n"
-                              "Out of sample accuracy is %.2f" % (
+                              "In sample accuracy is %.2f%% and loss is %.4f.\n"
+                              "Out of sample accuracy is %.2f%%" % (
                               percent_done, step, in_sample_acc, loss_value, out_of_sample_acc))
-                        saver.save(session, filename + "_step_" + str(step))
+
+
                         results.append([step, in_sample_acc, out_of_sample_acc])
                         np.save("results.npz", np.asarray(results))
+
                     step += 1
             except tf.errors.OutOfRangeError:
                 saver.save(session, filename + "_final")
@@ -90,10 +92,8 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
             session.close()
 
 
-def predict(images):
+def predict(images, step=0):
     n, d = images.shape
-    print("Beginning prediction")
-    print(images.shape)
     labels = np.zeros(shape=(n, 10))
     learning_rate = 0.0
     keep_prop = 1.0
@@ -111,20 +111,16 @@ def predict(images):
         feed_dict = {images_ph: images, labels_ph: labels, learning_rate_ph: learning_rate, keep_prop_ph: keep_prop}
         with tf.Session() as session:
             session.run(init_op, feed_dict=feed_dict)
-            saver.restore(sess=session, save_path=filename + "_final")
+            saver.restore(sess=session, save_path=filename + "_step_" + str(step))
             coord = tf.train.Coordinator()
             threads = tf.train.start_queue_runners(sess=session, coord=coord)
             step = 0
             try:
                 while not coord.should_stop():
                     prediction.append(session.run(pred_op, feed_dict={images_ph: images}))
-                    print("\rCompleted step " + str(step), end="")
-                    if step % 100 == 0:
-                        percent_done = (step / max_step) * 100.0
-                        print("\rCompleted %.2f percent / %d steps. \n")
                     step += 1
             except tf.errors.OutOfRangeError:
-                print('\rDone predicting for %d epochs, %d steps.' % (epochs, step-1))
+                pass
             finally:
                 coord.request_stop()
 
