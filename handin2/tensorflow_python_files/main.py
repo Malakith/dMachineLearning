@@ -101,7 +101,6 @@ def predict(images):
         with tf.Session() as session:
             session.run(init_op, feed_dict=feed_dict)
             saver.restore(sess=session, save_path=filename)
-            session.run(tf.initialize_all_variables(), feed_dict=feed_dict)
             coord = tf.train.Coordinator()
             threads = tf.train.start_queue_runners(sess=session, coord=coord)
             step = 0
@@ -123,7 +122,7 @@ def predict(images):
             return prediction
 
 
-train(images_train, labels_train, 0.01, 0.5, batch_size, 5)
+train(images_train, labels_train, 0.01, 0.5, 512, 10)
 pred = predict(images_test)
 print(np.sum(pred == labels_test))
 
