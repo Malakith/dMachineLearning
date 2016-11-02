@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  24 OCT 2016 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  2 NOV 2016 10:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -859,38 +859,61 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen166
 \l_MT_below_shortintertext_sep=\dimen167
 )
+(c:/texlive/2016/texmf-dist/tex/latex/fixme/fixme.sty
+Package: fixme 2013/01/28 v4.2 Collaborative annotations for LaTeX2e
+
+(c:/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(c:/texlive/2016/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(c:/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(c:/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks36
+\XKV@tempa@toks=\toks37
+)
+\XKV@depth=\count155
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\c@fixmecount=\count156
+\c@fxnotecount=\count157
+\c@fxwarningcount=\count158
+\c@fxerrorcount=\count159
+\c@fxfatalcount=\count160
+)
 (./handin2-group22.aux)
 \openout1 = `handin2-group22.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 22.
  (c:/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count155
+\scratchcounter=\count161
 \scratchdimen=\dimen168
 \scratchbox=\box31
-\nofMPsegments=\count156
-\nofMParguments=\count157
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count158
+\nofMPsegments=\count162
+\nofMParguments=\count163
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count164
 \MPscratchDim=\dimen169
-\MPnumerator=\count159
-\makeMPintoPDFobject=\count160
-\everyMPtoPDFconversion=\toks37
+\MPnumerator=\count165
+\makeMPintoPDFobject=\count166
+\everyMPtoPDFconversion=\toks39
 ) (c:/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -932,64 +955,142 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 29.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 31.
 
 (c:/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 29.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 31.
 
 (c:/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 29.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 31.
 
 
 (c:/texlive/2016/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 29.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 31.
 
 
 (c:/texlive/2016/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 29.
+(Font)              <10.95> on input line 31.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 29.
+(Font)              <8> on input line 31.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 29.
-LaTeX Font Info:    Try loading font information for U+msa on input line 29.
+(Font)              <6> on input line 31.
+LaTeX Font Info:    Try loading font information for U+msa on input line 31.
 
 (c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 29.
+LaTeX Font Info:    Try loading font information for U+msb on input line 31.
 
 (c:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+
+Package FiXme Warning: \fixme is deprecated;
+(FiXme)                please use \fxfatal instead on input line 36.
+
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 36.
+(c:/texlive/2016/texmf-dist/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+Package FiXme Warning: \fixme is deprecated;
+(FiXme)                please use \fxfatal instead on input line 37.
 
 
-{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./handin2-grou
-p22.aux) ) 
+LaTeX Warning: Marginpar on page 1 moved by 39.0555pt.
+
+<svm_lin.PNG, id=1, 401.5pt x 192.72pt>
+File: svm_lin.PNG Graphic file (type png)
+ <use svm_lin.PNG>
+Package pdftex.def Info: svm_lin.PNG used on input line 41.
+(pdftex.def)             Requested size: 238.69896pt x 114.57718pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 42.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 42.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 42.
+
+<svm_poly2.PNG, id=3, 401.5pt x 192.72pt>
+File: svm_poly2.PNG Graphic file (type png)
+ <use svm_poly2.PNG>
+Package pdftex.def Info: svm_poly2.PNG used on input line 48.
+(pdftex.def)             Requested size: 238.69896pt x 114.57718pt.
+
+<svm_poly3.PNG, id=4, 391.4625pt x 192.72pt>
+File: svm_poly3.PNG Graphic file (type png)
+ <use svm_poly3.PNG>
+Package pdftex.def Info: svm_poly3.PNG used on input line 55.
+(pdftex.def)             Requested size: 238.69896pt x 117.51491pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<svm_rbf.PNG, id=5, 394.47375pt x 192.72pt>
+File: svm_rbf.PNG Graphic file (type png)
+ <use svm_rbf.PNG>
+Package pdftex.def Info: svm_rbf.PNG used on input line 62.
+(pdftex.def)             Requested size: 238.69896pt x 116.61507pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<svm_rbf_grid.PNG, id=6, 626.34pt x 661.72218pt>
+File: svm_rbf_grid.PNG Graphic file (type png)
+ <use svm_rbf_grid.PNG>
+Package pdftex.def Info: svm_rbf_grid.PNG used on input line 69.
+(pdftex.def)             Requested size: 306.89792pt x 324.2467pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<nn_layout.png, id=7, 283.0575pt x 190.46156pt>
+File: nn_layout.png Graphic file (type png)
+ <use nn_layout.png>
+Package pdftex.def Info: nn_layout.png used on input line 92.
+(pdftex.def)             Requested size: 136.39792pt x 91.78087pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1
+
+
+{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./svm_lin.PNG> 
+<./svm_poly2.PNG>] [2 <./svm_poly3.PNG> <./svm_rbf.PNG>] [3 <./svm_rbf_grid.PNG
+> <./nn_layout.png>] (./handin2-group22.aux) ) 
 Here is how much of TeX's memory you used:
- 7453 strings out of 493013
- 99544 string characters out of 6136993
- 194932 words of memory out of 5000000
- 10876 multiletter control sequences out of 15000+600000
- 43035 words of font info for 47 fonts, out of 8000000 for 9000
+ 8252 strings out of 493013
+ 111812 string characters out of 6136993
+ 214854 words of memory out of 5000000
+ 11633 multiletter control sequences out of 15000+600000
+ 71618 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,27p,243b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/
-2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2016/texmf-dist/fo
-nts/type1/public/lm/lmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm
-/lmr12.pfb>
-Output written on handin2-group22.pdf (1 page, 82244 bytes).
+ 44i,10n,78p,384b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2016/texmf-dist/fonts
+/enc/dvips/lm/lm-rm.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathi
+t.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2016
+/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/
+type1/public/lm/lmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lm
+r10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive
+/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2016/texmf-dist/fon
+ts/type1/public/lm/lmss8.pfb>
+Output written on handin2-group22.pdf (3 pages, 411372 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
- 14 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
