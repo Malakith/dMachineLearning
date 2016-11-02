@@ -41,10 +41,11 @@ def build_placeholders(n, batch_size, epochs, shuffle=True):
 
 
 def construct_graph(images, keep_prop):
-    # First convolued layer
+    # Input layer
+    image = tf.reshape(images, [-1, 28, 28, 1])
+    # First convoluted layer
     w1 = weight_variable([5, 5, 1, 32], name="w1")
     b1 = bias_variable([32], name='b1')
-    image = tf.reshape(images, [-1, 28, 28, 1])
     h_c1 = tf.nn.relu(conv2d(image, w1) + b1)
     h_p1 = max_pool_2x2(h_c1)
     # Second convoluted layer
@@ -91,7 +92,6 @@ def evaluate(logits, labels):
 
 def buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate, shuffle=True):
     n, d = images.shape
-    max_step = (n / batch_size) * epochs
     # We build placeholders for our data and variables.
     images_ph, images_, labels_ph, labels_, learning_rate_ph, learning_rate_, keep_prop_ph, keep_prop_ = \
         build_placeholders(n, batch_size, epochs, shuffle)
