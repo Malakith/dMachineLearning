@@ -23,8 +23,8 @@ labels_test = test_file['labels']
 
 # Then we add the mnist data:
 
-# images_train = np.concatenate((mnist.train.images, images_train), axis=0)
-# labels_train = np.concatenate((mnist.train.labels, labels_train), axis=0)
+images_train = np.concatenate((mnist.train.images, images_train), axis=0)
+labels_train = np.concatenate((mnist.train.labels, labels_train), axis=0)
 
 print(images_train.shape)
 print(labels_train.shape)
@@ -39,11 +39,11 @@ filename = "conv_network_params"
 epochs = 2
 learning_rate = 0.01
 batch_size = 512
-
+done_epochs = 0
 
 # Now we begin training
 
-def train(images, labels, learning_rate, keep_prop, batch_size, epochs):
+def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = False):
     with tf.Graph().as_default():
         n, d = images.shape
         max_step = (n / batch_size) * epochs
@@ -53,6 +53,8 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs):
         feed_dict = {images_ph: images, labels_ph: labels, learning_rate_ph: learning_rate, keep_prop_ph: keep_prop}
         with tf.Session() as session:
             session.run(init_op, feed_dict=feed_dict)
+            if cont ==True:
+                saver.restore(sess=session, save_path=filename)
 
             coord = tf.train.Coordinator()
             threads = tf.train.start_queue_runners(sess=session, coord=coord)
