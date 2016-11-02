@@ -1,6 +1,7 @@
 import tensorflow as tf
 
-filename = "ConvoNetwork"
+filename = "simple_network_params"
+
 
 epochs = 100
 learning_rate = 0.01
@@ -13,6 +14,7 @@ def getLearningRate(): return learning_rate
 def getBatchSize(): return batch_size
 def getKeepProp(): keep_prop
 
+
 def getFilename(): return filename
 
 def weight_variable(shape, name):
@@ -24,17 +26,7 @@ def bias_variable(shape, name):
     initial = tf.constant(0.1, shape=shape, dtype=tf.float32)
     return tf.Variable(initial, name=name)
 
-
-def conv2d(x, W):
-    return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
-
-
-def max_pool_2x2(x):
-    return tf.nn.max_pool(x, ksize=[1, 2, 2, 1],
-                          strides=[1, 2, 2, 1], padding='SAME')
-
-
-def build_placeholders(n, batch_size, epochs, shuffle=True):
+def build_placeholders(batch_size, epochs, shuffle=True):
     images_ph = tf.placeholder(tf.float32, shape=[None, 28 * 28], name='imagesPlaceholder')
     labels_ph = tf.placeholder(tf.float32, shape=[None, 10], name='labelsPlaceholder')
     images = tf.reshape(tf.Variable(images_ph, trainable=False, validate_shape=False, name='images_var'),
@@ -53,30 +45,17 @@ def build_placeholders(n, batch_size, epochs, shuffle=True):
 
 
 def construct_graph(images, keep_prop):
-    # Input layer
-    image = tf.reshape(images, [-1, 28, 28, 1])
-    # First convoluted layer
-    w1 = weight_variable([5, 5, 1, 32], name="w1")
-    b1 = bias_variable([32], name='b1')
-    h_c1 = tf.nn.relu(conv2d(image, w1) + b1)
-    h_p1 = max_pool_2x2(h_c1)
-    # Second convoluted layer
-    w2 = weight_variable([5, 5, 32, 64], name="w2")
-    b2 = bias_variable([64], name='b2')
-    h_c2 = tf.nn.relu(conv2d(h_p1, w2) + b2)
-    h_p2 = max_pool_2x2(h_c2)
     # Densely connected layer
-    w3 = weight_variable([7 * 7 * 64, 1024], name="w3")
+    w3 = weight_variable([28*28, 1024], name="w3")
     b3 = bias_variable([1024], name='b3')
-    h_p2_flat = tf.reshape(h_p2, [-1, 7 * 7 * 64])
-    h_fc1 = tf.nn.relu(tf.matmul(h_p2_flat, w3) + b3)
+    h_fc1 = tf.nn.relu(tf.matmul(images, w3) + b3)
     # Dropout
     h_fc1_drop = tf.nn.dropout(h_fc1, keep_prop)
     # Readout layer
     w4 = weight_variable([1024, 10], name="w4")
     b4 = bias_variable([10], name='b4')
     logits = tf.matmul(h_fc1_drop, w4) + b4
-    saver = tf.train.Saver({'w1': w1, 'b1': b1, 'w2': w2, 'b2': b2, 'w3': w3, 'b3': b3, 'w4': w4, 'b4': b4})
+    saver = tf.train.Saver({'w3': w3, 'b3': b3, 'w4': w4, 'b4': b4})
     return logits, saver
 
 
@@ -100,7 +79,6 @@ def evaluate(logits, labels):
     # Returns the number of correct predictions.
     correct_prediction = tf.equal(tf.argmax(logits, 1), tf.argmax(labels, 1), name="correct_predicitons")
     return tf.reduce_sum(tf.cast(correct_prediction, tf.float32), name='evaluation')
-
 
 def buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate, shuffle=True):
     n, d = images.shape

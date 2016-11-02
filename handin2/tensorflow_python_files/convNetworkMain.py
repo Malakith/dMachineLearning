@@ -1,5 +1,5 @@
 import tensorflow as tf
-import convNetwork as cn
+import convNetwork as n
 import numpy as np
 from tensorflow.examples.tutorials.mnist import input_data
 
@@ -34,12 +34,13 @@ print(labels_train.dtype)
 
 # Here we can set our training variables:
 
-filename = "conv_network_params"
+filename = n.getFilename()
 
-epochs = 2
-learning_rate = 0.01
-batch_size = 512
-done_epochs = 0
+epochs = n.getEpochs()
+learning_rate = n.getLearningRate()
+batch_size = n.getBatchSize()
+keep_prop = n.getKeepProp()
+
 results = list()
 
 # Now we begin training
@@ -49,17 +50,19 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
         n, d = images.shape
         max_step = (n / batch_size) * epochs
         images_ph, labels_ph, learning_rate_ph, keep_prop_ph, init_op, train_op, pred_op, eval_op, saver = \
-            cn.buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate)
+            n.buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate)
 
         feed_dict = {images_ph: images, labels_ph: labels, learning_rate_ph: learning_rate, keep_prop_ph: keep_prop}
         with tf.Session() as session:
             session.run(init_op, feed_dict=feed_dict)
+            step = 0
             if cont > 0:
                 saver.restore(sess=session, save_path=filename + "_step_" + str(cont))
+                step = cont
 
             coord = tf.train.Coordinator()
             threads = tf.train.start_queue_runners(sess=session, coord=coord)
-            step = 0
+
             try:
                 while not coord.should_stop():
                     _, loss_value = session.run(train_op)
@@ -78,7 +81,7 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
 
 
                         results.append([step, in_sample_acc, out_of_sample_acc])
-                        np.save("results.npz", np.asarray(results))
+                        np.save(filename, np.asarray(results))
 
                     step += 1
             except tf.errors.OutOfRangeError:
@@ -104,7 +107,7 @@ def predict(images, step=0):
 
         max_step = (n / batch_size) * epochs
         images_ph, labels_ph, learning_rate_ph, keep_prop_ph, init_op, train_op, pred_op, eval_op, saver = \
-            cn.buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate, shuffle=False)
+            n.buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate, shuffle=False)
 
 
 
@@ -128,7 +131,7 @@ def predict(images, step=0):
             session.close()
             return prediction
 
-train(images_train, labels_train, 0.01, 0.5, 512, 100)
+train(images_train, labels_train, learning_rate, keep_prop, batch_size, epochs)
 pred = predict(images_test)
 print(np.sum(pred == labels_test)/images_test.shape[0])
 
