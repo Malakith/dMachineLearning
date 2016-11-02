@@ -27,7 +27,7 @@
 %\frontmatter
 %\clearpage	
 %\tableofcontents*
-	\title{Machine Learning E16 - Handin 2\\OCR with SVM and (Deep) Neural Nets}
+	\title{Machine Learning E16 - Handin 2\\OCR with SVM and (Dep) Neural Networks}
 	\author{Mark Medum Bundgaard, Morten Jensen, Martin Sand Nielsen\\ Aarhus University}
 	\date{\today}
 	
@@ -41,7 +41,8 @@
 	
 	
 \chapter{SVM with SciKit-Learn}
-Several Support Vector Machine-classifier has been trained on the \emph{AUtrain}-digits with different kernels. See Table \ref{tab:svm_accuracy} for the achieved classification results. 
+Several Support Vector Machine-classifier has been trained on the \emph{AUtrain}-digits with different kernels. See Table \ref{tab:svm_accuracy} for the achieved classification results. The implementation of SVMs from Scikit-learn  \footnote{ \url{http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html}}
+is used for these experiments.
 
 \section{Polynomial kernels}
 A linear(1st order polynomial), a 2nd and 3rd order polynomial has been trained with various values for the hyperparameter, $C$. This parameter defines how much it should cost for each support vector, that is not kept outside the SVM margins. Too large $C$ and the SVM will tend to overfit the training data to avoid any support vectors in margins. Too low $C$ results in no penalty for not fitting the training data well. The optimal value for this hyperparameter is found by evaluation with a separate validation set. See the comparison of these \emph{in sample} and \emph{out of sample} classification accuracies for various $C$ values in Figure \ref{fig:svm_lin}, \ref{fig:svm_poly2} and \ref{fig:svm_poly3}.
@@ -105,7 +106,7 @@ The two dimensional hyper parameter fit for RBF results in many more SVM trainin
 
 \begin{table}[h!]
 	\centering
-	\caption{Classification accuracy of digits with different kernels for the found optimal hyperparameters. }
+	\caption{Classification accuracy with different kernels for the found optimal hyperparameters. }
 	\label{tab:svm_accuracy}
 	\begin{tabular}{crr S[table-format=2.4]}
 		SVM kernel & Validation accuracy & Training accuracy & {$C$-value} \\ 
@@ -134,7 +135,7 @@ The two dimensional hyper parameter fit for RBF results in many more SVM trainin
 	\caption{Illustration of a small NN, with one hidden layer. In our case the input vector consists of the $784$ pixel values for an image, the hidden layer has $1024$ nodes, and the output layer has $10$ nodes, one for each digit-class. Biases are added for both computational layers.}
 	\label{fig:nn_layout}
 \end{figure}
-
+The TensorFlow\footnote{\url{https://www.tensorflow.org/}} computation library has been used.
 \fixme{Hyperparameters: learning rate, batchsize, epochs to run, }
 \fixme{training time}
 \fixme{results}
