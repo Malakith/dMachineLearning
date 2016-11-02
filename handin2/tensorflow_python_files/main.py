@@ -123,7 +123,7 @@ def predict(images):
             return prediction
 
 
-train(images_train, labels_train, 0.01, 0.5, batch_size, 10)
+train(images_train, labels_train, 0.01, 0.5, batch_size, 5)
 pred = predict(images_test)
 print(np.sum(pred == labels_test))
 
