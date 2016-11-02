@@ -32,16 +32,12 @@
 	%\frontmatter
 	%\clearpage	
 	%\tableofcontents*
-	\title{Machine Learning E16 - Handin 2\\OCR with SVM and (Dep) Neural Networks}
-	\author{Mark Medum Bundgaard, Morten Jensen, Martin Sand Nielsen\\ Aarhus University}
-	\date{\today}
+	\title{Machine Learning E16 - Handin 2\\OCR with SVM and (Deep) Neural Networks}
+	\author{Mark Medum Bundgaard, Morten Jensen, Martin Sand Nielsen}
+	\date{\today, Aarhus University}
 	
 	\mainmatter
 	\maketitle
-	
-	
-	
-	
 	
 	
 	
@@ -51,8 +47,6 @@
 	
 	\section{Polynomial kernels}
 	A linear(1st order polynomial), a 2nd and 3rd order polynomial has been trained with various values for the hyperparameter, $C$. This parameter defines how much it should cost for each support vector, that is not kept outside the SVM margins. Too large $C$ and the SVM will tend to overfit the training data to avoid any support vectors in margins. Too low $C$ results in no penalty for not fitting the training data well. The optimal value for this hyperparameter is found by evaluation with a separate validation set. See the comparison of these \emph{in sample} and \emph{out of sample} classification accuracies for various $C$ values in Figure \ref{fig:svm_lin}, \ref{fig:svm_poly2} and \ref{fig:svm_poly3}.
-	
-	\fixme{should we measure or mention training time? (mention multithreaded solution?)}
 	
 	\begin{figure}[h!]
 		\centering
@@ -84,11 +78,10 @@
 	
 	\section{RBF kernel}
 	A more general kernel that is often used, is the Radial Basis Function (RBF).
-	Which expands the raw input feature dimensions (vector of pixel values) to infinite many feature dimensions, such that they results in a similarity measure between images. Beside the usual $C$ cost hyper parameter, RBF also has a $\gamma$ hyper parameter defining the width of the bell shape for each data point(image). \fixme{Explain this better...}
+	Which expands the raw input feature dimensions (vector of pixel values) to infinite many feature dimensions, such that they results in a similarity measure between images. Beside the usual $C$ cost hyper parameter, RBF also has a $\gamma$ hyper parameter defining the width of the bell shape for each data point(image).
 	
 	
 	The results of a coarse grid search for the optimum combination of these parameters can be seen in Figure \ref{fig:svm_rbf_grid}. 
-	\fixme{Comment on overfitting and the different 'areas' on the 3D plot, Morten}
 	For comparing the RBF kernel with the polynomial kernels, the optimal $\gamma=0.01$ has been used in Figure \ref{fig:svm_rbf}.
 	
 	\begin{figure}[h!]
@@ -145,16 +138,17 @@
 	\end{figure}
 	
 	
+	
 	\section{Improved (combined) training set}
 	To improve training, the AUtrain and MNIST dataset have been combined into one for training. The training set of $65000$ images should be even more resistant to over fitting the CNN during training. 
-	The original AUtest set is still used for validation while finding the optimal hyper parameters. Then for the final model training, when the best model is chosen, the test set is included in the training set before deploying the model for prediction of digits. 
+	The original AUtest set is still used for validation while finding the optimal hyper parameters. Then for the final model training, when the best model is chosen, the test set is included in the training set before deploying the model for prediction of digits.  
 	
 	
 	\section{Training}
 	The training was done with TensorFlow on GPU with a batchsize of 512. For every 100 iterations an evaluation of the accuracy was performed. 
 	The learning rate was set as a exponetial decresing learning rate, starting at $0.001$ and dropping by a factor of $0.96$ every $100$ iterations. The parameters was randomly initialized by standard procedures.
 	
-	Furthermore a snapshot of the layer parameters was saved when evaluating the model. When no increase in out of sample accuracy is observed the training is stopped. Maximum number of iterations was set at $10000$ to leave the computations overnight. The snapshot corresponding to the highest accuracy is saved, and now define the final trained model. The validation accuracy of the trained neural network was ???. 
+	Furthermore a snapshot of the layer parameters was saved when evaluating the model. When no increase in out of sample accuracy is observed the training is stopped. Maximum number of iterations was set at $10000$ to leave the computations overnight. The snapshot corresponding to the highest accuracy is saved, and now define the final trained model. The validation accuracy of the trained neural network was $96.47\%$ at iteration 3200. No sign of significant overfitting occured. See Figure \ref{fig:nn_learning}. 
 	
 	\begin{figure}[h!]
 		\centering
@@ -187,25 +181,19 @@
 	
 	\section{Training}
 	Training was performed like the the simple neural network, but with a factor $0.94$ in learning rate every $100$ steps. The learning progression is plotted in Figure \ref{fig:cnn_learning}. 
-	The maximum validation accuracy of $xx.xx\%$was reached at ???? iterations. \fixme{res her!}
-	
-	
-	
+	The maximum validation accuracy of $98.22\%$was reached at $2300$ iterations.
 	This result can be compared to the other models in Figure \ref{tab:classifier_accuracy}. 
-	
-	
-	
-	\section{Hyperparameters}
-	
-	\fixme{Hyperparameters: learning rate, batchsize, epochs to run, }
-	\fixme{results}
 	
 	\begin{figure}[h!]
 		\centering
-		%\includegraphics[width=1\linewidth]{cnn_learning.png}
+		\includegraphics[width=0.9\linewidth]{cnn_learning.png}
 		\caption{Learning curve for the convolution neural network. The triangle marks maximum.}
 		\label{fig:cnn_learning}
 	\end{figure}
+	
+	
+	
+	
 	
 	\begin{table}[h!]
 		\centering
@@ -216,11 +204,23 @@
 			\hline 
 			SVM with RBF & $96.78\%$ \\ 
 			NN & $96.47\%$ \\ 
-			CNN & $0\%$ \\ 
+			CNN & $98.22\%$ 
 		\end{tabular} 
 	\end{table}
 	
 	
+	
+	
+	
+	
+	\chapter{Discussion}
+	The final model deployed as a classifier in the delivered predict.py is the CNN trained on all data sets readily available as one combined training set. Therefore this final model has not been validated with any dedicated test set, but we trust that th dropout during training and stopping at iteration 4000(early stopping) will avoid overfitting. The actual effect of dropout has not been subject to experiment for this report. 
+	
+	A lot of hyper parameters has not been explored in our work. Size and quantity of layers, and different combination of layers could have huge influence on training speed and generalization of the final classifier network. More advanced schemes for validation could probably also have improved our training. 
+	But the experiments truly shows that neural networks outperforms the most used SVM and kernel combinations.
+	
+	
+	\footnote{Jeg hader horeunger  /FURT} 
 	
 	
 \end{document}
