@@ -16,7 +16,11 @@
 \usepackage{amssymb,amsthm,bm}
 \usepackage{mathtools}	
 
+
+% This document uses
 \usepackage[draft,silent]{fixme}
+\usepackage{hyperref}
+\usepackage{siunitx}
 
 
 \begin{document}
@@ -37,7 +41,7 @@
 	
 	
 \chapter{SVM with SciKit-Learn}
-Several Support Vector Machine-classifier has been trained on the \emph{AUtrain}-digits with different kernels. See 
+Several Support Vector Machine-classifier has been trained on the \emph{AUtrain}-digits with different kernels. See Table \ref{tab:svm_accuracy} for the achieved classification results. 
 
 \section{Polynomial kernels}
 A linear(1st order polynomial), a 2nd and 3rd order polynomial has been trained with various values for the hyperparameter, $C$. This parameter defines how much it should cost for each support vector, that is not kept outside the SVM margins. Too large $C$ and the SVM will tend to overfit the training data to avoid any support vectors in margins. Too low $C$ results in no penalty for not fitting the training data well. The optimal value for this hyperparameter is found by evaluation with a separate validation set. See the comparison of these \emph{in sample} and \emph{out of sample} classification accuracies for various $C$ values in Figure \ref{fig:svm_lin}, \ref{fig:svm_poly2} and \ref{fig:svm_poly3}.
@@ -74,7 +78,7 @@ A linear(1st order polynomial), a 2nd and 3rd order polynomial has been trained 
 
 \section{RBF kernel}
 A more general kernel that is often used, is the Radial Basis Function (RBF).
-Which expands the raw input feature dimensions (vector of pixel values) to infinite many feature dimensions, such that they results in a similarity measure between images. Beside the usual $C$ cost hyper parameter, RBF also has a $\gamma$ hyper parameter defining the width of the bell shape for each data point(image). 
+Which expands the raw input feature dimensions (vector of pixel values) to infinite many feature dimensions, such that they results in a similarity measure between images. Beside the usual $C$ cost hyper parameter, RBF also has a $\gamma$ hyper parameter defining the width of the bell shape for each data point(image). \fixme{Explain this better...}
 
 
 The results of a coarse grid search for the optimum combination of these parameters can be seen in Figure \ref{fig:svm_rbf_grid}. 
@@ -103,13 +107,13 @@ The two dimensional hyper parameter fit for RBF results in many more SVM trainin
 	\centering
 	\caption{Classification accuracy of digits with different kernels for the found optimal hyperparameters. }
 	\label{tab:svm_accuracy}
-	\begin{tabular}{rccc}
-		SVM kernel & Validation accuracy & Training accuracy & $C$-value \\ 
+	\begin{tabular}{crr S[table-format=2.4]}
+		SVM kernel & Validation accuracy & Training accuracy & {$C$-value} \\ 
 		\hline 
-		Linear & $93.29\%$ & $94.52\%$ & $0.01$ \\ 
-		2nd order poly. & $96.16\%$ & $98.74\%$ & $1$ \\ 
-		3rd order poly. & $0\%$ & $0\%$ & ?? \\ 
-		RBF, $\gamma=0.01$ & $96.94\%$ & $99.98\%$ & $10$ \\ 
+		Linear & $93.29\%$ & $94.52\%$ & 0.01 \\ 
+		2nd order poly. & $96.16\%$ & $98.74\%$ & 1 \\ 
+		3rd order poly. & {??} & {??} & {??} \\ 
+		RBF ($\gamma=0.01$) & $96.94\%$ & $99.98\%$ & 10 \\ 
 	\end{tabular} 
 \end{table}
 
