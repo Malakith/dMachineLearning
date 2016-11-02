@@ -1,5 +1,5 @@
 import tensorflow as tf
-import convNetwork as n
+import convNetwork as model
 import numpy as np
 from tensorflow.examples.tutorials.mnist import input_data
 
@@ -50,7 +50,7 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
         n, d = images.shape
         max_step = (n / batch_size) * epochs
         images_ph, labels_ph, learning_rate_ph, keep_prop_ph, init_op, train_op, pred_op, eval_op, saver = \
-            n.buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate)
+            model.buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate)
 
         feed_dict = {images_ph: images, labels_ph: labels, learning_rate_ph: learning_rate, keep_prop_ph: keep_prop}
         with tf.Session() as session:
@@ -107,7 +107,7 @@ def predict(images, step=0):
 
         max_step = (n / batch_size) * epochs
         images_ph, labels_ph, learning_rate_ph, keep_prop_ph, init_op, train_op, pred_op, eval_op, saver = \
-            n.buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate, shuffle=False)
+            model.buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate, shuffle=False)
 
 
 
