@@ -40,7 +40,6 @@ epochs = 2
 learning_rate = 0.01
 batch_size = 512
 done_epochs = 0
-
 results = list()
 
 # Now we begin training
@@ -70,14 +69,15 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
                         in_sample_acc = (eval_value/batch_size)*100
                         percent_done = (step / max_step) * 100.0
                         pred = session.run(pred_op, feed_dict={images_ph: images_test})
-                        out_of_sample_acc = np.sum(pred == labels_test)/images_test.shape[0]
+                        out_of_sample_eval = session.run(eval_op, feed_dict={images_ph: images_test, labels_ph:one_hot(labels_test), keep_prop_ph: 1.0})
+                        out_of_sample_acc = out_of_sample_eval/batch_size
                         print("\rCompleted %.2f percent / %d steps. \n"
                               "In sample accuracy is %.2f and loss is %.4f.\n"
                               "Out of sample accuracy is %.2f" % (
                               percent_done, step, eval_value, loss_value, out_of_sample_acc))
                         saver.save(session, filename + "_step_" + str(step))
                         results.append([step, in_sample_acc, out_of_sample_acc])
-                        np.save("stats", np.asarray(results))
+                        np.save("results.npz", np.asarray(results))
                     step += 1
             except tf.errors.OutOfRangeError:
                 saver.save(session, filename + "_final")
