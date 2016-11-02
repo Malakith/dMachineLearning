@@ -65,7 +65,7 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
 
             try:
                 while not coord.should_stop():
-                    _, loss_value = session.run(train_op, feed_dict={keep_prop_ph: keep_prop})
+                    _, loss_value = session.run(train_op, feed_dict={keep_prop_ph: 0.5})
                     print("\rCompleted step " + str(step), end="")
                     if step % 100 == 0:
                         saver.save(session, filename + "_step_" + str(step))

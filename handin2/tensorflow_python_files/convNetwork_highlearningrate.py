@@ -3,7 +3,7 @@ import tensorflow as tf
 filename = "ConvoNetwork_highlearningrate"
 
 epochs =10000
-learning_rate = 0.01
+learning_rate = 0.001
 batch_size = 512
 keep_prop = 0.5
 
@@ -11,7 +11,7 @@ keep_prop = 0.5
 def getEpochs(): return epochs
 def getLearningRate(): return learning_rate
 def getBatchSize(): return batch_size
-def getKeepProp(): keep_prop
+def getKeepProp(): return keep_prop
 
 def getFilename(): return filename
 
@@ -89,7 +89,7 @@ def loss(logits, labels):
 
 def train(loss, learning_rate_start):
     global_step = tf.Variable(0, name='global_step', trainable=False)
-    learning_rate = tf.train.exponential_decay(learning_rate_start, global_step, 100, 0.98, staircase=True,
+    learning_rate = tf.train.exponential_decay(learning_rate_start, global_step, 100, 0.96, staircase=True,
                                                name="exp_learning_rate")
     optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate, name='AdamOptimizer')
     train_step = optimizer.minimize(loss, global_step=global_step, name="train_step")

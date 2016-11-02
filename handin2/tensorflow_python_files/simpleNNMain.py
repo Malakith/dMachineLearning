@@ -82,7 +82,7 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
 
 
                         results.append([step, in_sample_acc, out_of_sample_acc])
-                        np.save("results.npz", np.asarray(results))
+                        np.save(filename, np.asarray(results))
 
                     step += 1
             except tf.errors.OutOfRangeError:

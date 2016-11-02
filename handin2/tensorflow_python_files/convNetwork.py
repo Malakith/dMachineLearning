@@ -11,7 +11,7 @@ keep_prop = 0.5
 def getEpochs(): return epochs
 def getLearningRate(): return learning_rate
 def getBatchSize(): return batch_size
-def getKeepProp(): keep_prop
+def getKeepProp(): return keep_prop
 
 def getFilename(): return filename
 
@@ -34,7 +34,7 @@ def max_pool_2x2(x):
                           strides=[1, 2, 2, 1], padding='SAME')
 
 
-def build_placeholders(batch_size, epochs, shuffle=True):
+def build_placeholders(n, batch_size, epochs, shuffle=True):
     images_ph = tf.placeholder(tf.float32, shape=[None, 28 * 28], name='imagesPlaceholder')
     labels_ph = tf.placeholder(tf.float32, shape=[None, 10], name='labelsPlaceholder')
     images = tf.reshape(tf.Variable(images_ph, trainable=False, validate_shape=False, name='images_var'),
@@ -106,7 +106,7 @@ def buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate, shu
     n, d = images.shape
     # We build placeholders for our data and variables.
     images_ph, images_, labels_ph, labels_, learning_rate_ph, learning_rate_, keep_prop_ph, keep_prop_ = \
-        build_placeholders(batch_size, epochs, shuffle)
+        build_placeholders(n, batch_size, epochs, shuffle)
     # Now we need to build our graph
     logits, saver = construct_graph(images_, keep_prop_)
     # We need a loss function

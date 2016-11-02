@@ -12,7 +12,7 @@ keep_prop = 0.5
 def getEpochs(): return epochs
 def getLearningRate(): return learning_rate
 def getBatchSize(): return batch_size
-def getKeepProp(): keep_prop
+def getKeepProp(): return keep_prop
 
 
 def getFilename(): return filename
