@@ -63,7 +63,7 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
             try:
                 while not coord.should_stop():
                     _, loss_value = session.run(train_op)
-                    print("\rCompleted step " + str(step), end="")
+                    print("Completed step " + str(step))
                     if step % 100 == 0:
                         saver.save(session, filename + "_step_" + str(step))
                         eval_value = session.run(eval_op, feed_dict={keep_prop_ph: 1.0})
@@ -71,9 +71,9 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
                         percent_done = (step / max_step) * 100.0
                         pred = predict(images_test, step)
                         out_of_sample_acc = (np.sum(pred == labels_test)/images_test.shape[0])*100
-                        print("\rCompleted %.2f percent / %d steps. \n"
+                        print("\n\n\nCompleted %.2f percent / %d steps. \n"
                               "In sample accuracy is %.2f%% and loss is %.4f.\n"
-                              "Out of sample accuracy is %.2f%%" % (
+                              "Out of sample accuracy is %.2f%%\n\n\n" % (
                               percent_done, step, in_sample_acc, loss_value, out_of_sample_acc))
 
 
