@@ -128,7 +128,7 @@ def predict(images, step=0):
             session.close()
             return prediction
 
-train(images_train, labels_train, 0.05, 0.5, 512, 100)
+train(images_train, labels_train, 0.01, 0.5, 512, 100)
 pred = predict(images_test)
 print(np.sum(pred == labels_test)/images_test.shape[0])
 
