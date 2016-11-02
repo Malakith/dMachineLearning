@@ -144,22 +144,24 @@
 		\label{fig:nn_layout}
 	\end{figure}
 	
+	
 	\section{Improved (combined) training set}
 	To improve training, the AUtrain and MNIST dataset have been combined into one for training. The training set of $65000$ images should be even more resistant to over fitting the CNN during training. 
-	The original AUtest set is still used for validation while finding the optimal hyper parameters. Then for the final model training the test set is included in the training set. 
+	The original AUtest set is still used for validation while finding the optimal hyper parameters. Then for the final model training, when the best model is chosen, the test set is included in the training set before deploying the model for prediction of digits. 
+	
 	
 	\section{Training}
-	
 	The training was done with TensorFlow on GPU with a batchsize of 512. For every 100 iterations an evaluation of the accuracy was performed. 
-	The learning rate was set as a exponetial decresing learning rate, starting at $0.001$ and dropping by a factor of $0.96$ every $100$ iterations. The parameters was randomly initialized.
+	The learning rate was set as a exponetial decresing learning rate, starting at $0.001$ and dropping by a factor of $0.96$ every $100$ iterations. The parameters was randomly initialized by standard procedures.
 	
-	\fixme{explain param init}
+	Furthermore a snapshot of the layer parameters was saved when evaluating the model. When no increase in out of sample accuracy is observed the training is stopped. Maximum number of iterations was set at $10000$ to leave the computations overnight. The snapshot corresponding to the highest accuracy is saved, and now define the final trained model. The validation accuracy of the trained neural network was ???. 
 	
-	Furthermore a snapshot of the layer parameters was saved when evaluating the model. When no increase in out of sample accuracy is observed the training is stopped. Maximum number of iterations was set at $10000$ to leave the computations overnight. The snapshot corresponding to the highest accuracy is saved, and now define the final trained model. The validation accuracy of the trained neural network was ???. This result can be compared to our different models in Figure \ref{tab:classifier_accuracy}.
-	
-	\fixme{training time?}
-	
-	\fixme{results}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.9\linewidth]{nn_learning.png}
+		\caption{Learning curve for the simple neural network. The triangle marks maximum.}
+		\label{fig:nn_learning}
+	\end{figure}
 	
 	
 	
@@ -173,18 +175,23 @@
 	
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=1\linewidth]{cnn_layout.png}
+		\includegraphics[width=0.9\linewidth]{cnn_layout.png}
 		\caption{Illustration of the CNN. Two $5 x 5$ convolution layers and $2 x 2$ max pooling layers before a fully connected layer of $1024 nodes$ and the fully connected output layer of $10$ nodes. Input monochrome images of $28x28$ pixels assumed.}
 		\label{fig:cnn_layout}
 	\end{figure}
 	
-	The input feature(pixel) vector is reshaped to a two dimensional matrix. The first convolution has $32$ filters with size $5x5$ with stride $1$. Padding is used to allow convolutions on the outer parts of the image and keep resolution. A max pool layer over $2x2$ areas effectively halves the resolution before yet another similar convolution with $64$ filters. A similar max pool reduce the data to $7x7x64$ scalars. Then a fully connected layer of $1024$ nodes and a output layer with dropout rate $0.5$ similar to the previously explained simple NN takes the convolution layer output into outputs for the 10 classes.
+	The input feature(pixel) vector is reshaped to a two dimensional matrix. The first convolution has $32$ filters with size $5x5$ with stride $1$. Padding is used to allow convolutions on the outer parts of the image and keep resolution. A max pool layer over $2x2$ areas effectively halves the resolution before yet another similar convolution with $64$ filters. A similar max pool reduce the data to $7x7x64$ scalars. Then a fully connected layer of $1024$ nodes and a output layer with dropout rate $0.5$ similar to the previously explained simple NN takes the convolution layer output into outputs for the 10 classes. 
 	
 	
 	
 	
 	\section{Training}
+	Training was performed like the the simple neural network, but with a factor $0.94$ in learning rate every $100$ steps. The learning progression is plotted in Figure \ref{fig:cnn_learning}. 
+	The maximum validation accuracy of $xx.xx\%$was reached at ???? iterations. \fixme{res her!}
 	
+	
+	
+	This result can be compared to the other models in Figure \ref{tab:classifier_accuracy}. 
 	
 	
 	
@@ -192,6 +199,13 @@
 	
 	\fixme{Hyperparameters: learning rate, batchsize, epochs to run, }
 	\fixme{results}
+	
+	\begin{figure}[h!]
+		\centering
+		%\includegraphics[width=1\linewidth]{cnn_learning.png}
+		\caption{Learning curve for the convolution neural network. The triangle marks maximum.}
+		\label{fig:cnn_learning}
+	\end{figure}
 	
 	\begin{table}[h!]
 		\centering
@@ -201,7 +215,7 @@
 			Classifier & Validation accuracy \\ 
 			\hline 
 			SVM with RBF & $96.78\%$ \\ 
-			NN & $0\%$ \\ 
+			NN & $96.47\%$ \\ 
 			CNN & $0\%$ \\ 
 		\end{tabular} 
 	\end{table}
