@@ -74,7 +74,7 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
                         print("\rCompleted %.2f percent / %d steps. \n"
                               "In sample accuracy is %.2f and loss is %.4f.\n"
                               "Out of sample accuracy is %.2f" % (
-                              percent_done, step, eval_value, loss_value, out_of_sample_acc))
+                              percent_done, step, in_sample_acc, loss_value, out_of_sample_acc))
                         saver.save(session, filename + "_step_" + str(step))
                         results.append([step, in_sample_acc, out_of_sample_acc])
                         np.save("results.npz", np.asarray(results))
