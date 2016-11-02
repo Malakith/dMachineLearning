@@ -34,12 +34,12 @@ print(labels_train.dtype)
 
 # Here we can set our training variables:
 
-filename = n.getFilename()
+filename = model.getFilename()
 
-epochs = n.getEpochs()
-learning_rate = n.getLearningRate()
-batch_size = n.getBatchSize()
-keep_prop = n.getKeepProp()
+epochs = model.getEpochs()
+learning_rate = model.getLearningRate()
+batch_size = model.getBatchSize()
+keep_prop = model.getKeepProp()
 
 results = list()
 
@@ -65,7 +65,7 @@ def train(images, labels, learning_rate, keep_prop, batch_size, epochs, cont = 0
 
             try:
                 while not coord.should_stop():
-                    _, loss_value = session.run(train_op)
+                    _, loss_value = session.run(train_op, feed_dict={keep_prop_ph: keep_prop})
                     print("\rCompleted step " + str(step), end="")
                     if step % 100 == 0:
                         saver.save(session, filename + "_step_" + str(step))
