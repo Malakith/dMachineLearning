@@ -99,7 +99,7 @@ def predict(images):
 
         feed_dict = {images_ph: images, labels_ph: labels, learning_rate_ph: learning_rate, keep_prop_ph: keep_prop}
         with tf.Session() as session:
-            session.run(tf.initialize_local_variables())
+            session.run(init_op, feed_dict=feed_dict)
             saver.restore(sess=session, save_path=filename)
             session.run(tf.initialize_all_variables(), feed_dict=feed_dict)
             coord = tf.train.Coordinator()
