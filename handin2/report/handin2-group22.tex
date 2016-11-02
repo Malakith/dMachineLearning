@@ -47,7 +47,6 @@ is used for these experiments.
 \section{Polynomial kernels}
 A linear(1st order polynomial), a 2nd and 3rd order polynomial has been trained with various values for the hyperparameter, $C$. This parameter defines how much it should cost for each support vector, that is not kept outside the SVM margins. Too large $C$ and the SVM will tend to overfit the training data to avoid any support vectors in margins. Too low $C$ results in no penalty for not fitting the training data well. The optimal value for this hyperparameter is found by evaluation with a separate validation set. See the comparison of these \emph{in sample} and \emph{out of sample} classification accuracies for various $C$ values in Figure \ref{fig:svm_lin}, \ref{fig:svm_poly2} and \ref{fig:svm_poly3}.
 
-\fixme{should we measure or mention training time? (mention multithreaded solution?)}
 
 \begin{figure}[h!]
 	\centering
@@ -146,6 +145,8 @@ The TensorFlow\footnote{\url{https://www.tensorflow.org/}} computation library h
 \fixme{illustrate convolutional network}
 \fixme{results}
 
+\chapter{Discussion}
+\fixme{should we measure or mention training time? (mention multithreaded solution?)}
 
 
 	
