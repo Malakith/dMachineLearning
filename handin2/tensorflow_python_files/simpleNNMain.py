@@ -34,12 +34,12 @@ print(labels_train.dtype)
 
 # Here we can set our training variables:
 
-filename = n.getFilename()
+filename = model.getFilename()
 
-epochs = n.getEpochs()
-learning_rate = n.getLearningRate()
-batch_size = n.getBatchSize()
-keep_prop = n.getKeepProp()
+epochs = model.getEpochs()
+learning_rate = model.getLearningRate()
+batch_size = model.getBatchSize()
+keep_prop = model.getKeepProp()
 
 
 results = list()

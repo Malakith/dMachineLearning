@@ -3,7 +3,7 @@ import tensorflow as tf
 filename = "simple_network_params"
 
 
-epochs = 100
+epochs = 10000
 learning_rate = 0.01
 batch_size = 512
 keep_prop = 0.5
@@ -84,7 +84,7 @@ def buildModel(images, labels, keep_prop, batch_size, epochs, learning_rate, shu
     n, d = images.shape
     # We build placeholders for our data and variables.
     images_ph, images_, labels_ph, labels_, learning_rate_ph, learning_rate_, keep_prop_ph, keep_prop_ = \
-        build_placeholders(n, batch_size, epochs, shuffle)
+        build_placeholders(batch_size, epochs, shuffle)
     # Now we need to build our graph
     logits, saver = construct_graph(images_, keep_prop_)
     # We need a loss function
