@@ -1,0 +1,46 @@
+
+\documentclass[a4paper,10pt,article,oneside,english]{memoir} 
+% DANSK OPSÆTNING
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} 
+\renewcommand{\englishhyphenmins}{22} 
+
+
+% FIGURER
+\usepackage{graphicx}
+
+% MATEMATIK
+\usepackage{amsmath}
+\usepackage{amssymb,amsthm,bm}
+\usepackage{mathtools}	
+
+
+% This document uses
+\usepackage[draft,silent]{fixme}
+\usepackage{hyperref}
+\usepackage{siunitx}
+
+
+% captions in italic
+\let\oldcaption\caption
+\renewcommand{\caption}[1]{\oldcaption{\emph{#1}}}
+
+
+\begin{document}
+	%\frontmatter
+	%\clearpage	
+	%\tableofcontents*
+	\title{Machine Learning E16 - Handin 3\\
+		 Hidden Markov Model for Gene Finding in Prokaryotes}
+	\author{Group 22\\
+		Mark Medum Bundgaard, Morten Jensen, Martin Sand Nielsen}
+	\date{\today, Aarhus University}
+	
+	\mainmatter
+	\maketitle
+	
+	
+	
+\end{document}
