@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  2 DEC 2016 11:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  2 DEC 2016 15:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1538,7 +1538,7 @@ Here is how much of TeX's memory you used:
 mf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1
 /public/lm/lmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10.p
 fb>
-Output written on handin3-group22.pdf (2 pages, 185087 bytes).
+Output written on handin3-group22.pdf (2 pages, 185218 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
