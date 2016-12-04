@@ -21,7 +21,7 @@
 \usepackage[draft,silent]{fixme}
 \usepackage{hyperref}
 \usepackage{siunitx}
-
+\usepackage{booktabs}
 
 % captions in italic
 \let\oldcaption\caption
@@ -40,13 +40,31 @@
 	
 	\mainmatter
 	\maketitle
-	
+
+\section{Model}
+
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{HMM_graph_cropped.pdf}
-	\caption{State graph for out HMM for genome annotation by explicitly matching codons within coding areas, and enforcing certain start and stop codons. Transition and emission probabilities gained by counting annotated data.}
+	\caption{Transition diagram and state emissions for our HMM for genome annotation by explicitly matching codons within coding areas, and enforcing certain start and stop codons. Transition and emission probabilities approximated by counting annotated data.}
 	\label{fig:hmm_graph}
 \end{figure}
 	
+\begin{table}
+	\centering
+	\caption{text}
+	\label{tab:ac}
+	\begin{tabular}{rccc}
+		& \multicolumn{3}{c}{Approximate correlation coefficient} \\ 
+		validation & C & R & Both \\ 
+		\midrule
+		Genome 1 &  &  &  \\ 
+		Genome 2 &  &  &  \\ 
+		Genome 3 &  &  &  \\ 
+		Genome 4 &  &  &  \\ 
+		Genome 5 &  &  &  \\ 
+		Average & & & \\
+	\end{tabular} 
+\end{table}
 	
 \end{document}
