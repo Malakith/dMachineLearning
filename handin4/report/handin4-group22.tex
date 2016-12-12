@@ -1,0 +1,50 @@
+
+\documentclass[a4paper,10pt,article,oneside,english]{memoir} 
+% DANSK OPSÆTNING
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} 
+\renewcommand{\englishhyphenmins}{22} 
+
+
+% FIGURER
+\usepackage{graphicx}
+
+% MATEMATIK
+\usepackage{amsmath}
+\usepackage{amssymb,amsthm,bm}
+\usepackage{mathtools}	
+
+
+% This document uses
+\usepackage[draft,silent]{fixme}
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{booktabs}
+
+% captions in italic
+\let\oldcaption\caption
+\renewcommand{\caption}[1]{\oldcaption{\emph{#1}}}
+
+
+\begin{document}
+	%\frontmatter
+	%\clearpage	
+	%\tableofcontents*
+	\title{Machine Learning E16 - Handin 4\\
+		Representative-based Clustering Algorithms}
+	\author{Group 22\\
+		Mark Medum Bundgaard, Morten Jensen, Martin Sand Nielsen}
+	\date{December 19, 2016, Aarhus University}
+	
+	\mainmatter
+	\maketitle
+
+\section{K-keans clustering}
+
+\section{Gaussian Mixture-model Expectation Maximization}
+
+\section{Image color compression example}
+
+\end{document}
