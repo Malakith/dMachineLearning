@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  12 DEC 2016 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  12 DEC 2016 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1505,42 +1505,57 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 43.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 43.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 \begin
+           {itemize}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 47.
+(c:/texlive/2016/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 47.
  [1
 
 
 {c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
  (./handin4-group22.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
-
-
-Package rerunfilecheck Warning: File `handin4-group22.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `handin4-group22.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  196D9295800303643BFC3C6D1C8743AD;207.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 59.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 59.
+Package rerunfilecheck Info: File `handin4-group22.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 59.
  ) 
 Here is how much of TeX's memory you used:
- 21168 strings out of 493013
- 378657 string characters out of 6136993
- 447154 words of memory out of 5000000
- 24475 multiletter control sequences out of 15000+600000
- 84049 words of font info for 83 fonts, out of 8000000 for 9000
+ 21191 strings out of 493013
+ 379016 string characters out of 6136993
+ 448154 words of memory out of 5000000
+ 24493 multiletter control sequences out of 15000+600000
+ 87044 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,10n,78p,10389b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2016/tex
-mf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type
-1/public/lm/lmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.p
-fb>
-Output written on handin4-group22.pdf (1 page, 79991 bytes).
+{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2016/tex
+mf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}<c:/texlive/2016/texmf-dist/fonts/type
+1/public/lm/lmbx10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12
+.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/20
+16/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2016/texmf-dist/fonts
+/type1/public/lm/lmsy10.pfb>
+Output written on handin4-group22.pdf (1 page, 108637 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
- 22 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
+ 39 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
