@@ -54,6 +54,30 @@
 
 \section*{Gaussian Mixture-model Expectation Maximization}
 
+
+\section*{Silhuette measures \& F1 scores}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{f1_vs_k.png}
+	\caption{}
+	\label{fig:f1}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{silhouette_vs_k.png}
+	\caption{}
+	\label{fig:silhouette}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{combined_clustering.png}
+	\caption{}
+	\label{fig:combined_clustering}
+\end{figure}
+
 \section*{Image color compression with K-means}
 The individual pixels in an normal RGB image holds information about the intensity of the three color channels. The color depth is given by the possible color combinations, which is usually 24 bit; 8 bit for each color channel. In a normal picture far from all possibilities af colors are present, so much of the color depth is unused. By limiting the number of possible colors to a small sub set of the full color depth, and thus let each pixel refer to a color in this color set, disk usage can be decreased significantly. The color compression would then be a algorithm deciding a color set and transform each pixel as to refer these. Likewise a decompression algorithm would then do the reverse transformation by looking up each pixels reference color. So the space savings comes at two additional computational costs.
 
