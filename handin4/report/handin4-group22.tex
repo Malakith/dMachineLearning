@@ -55,7 +55,20 @@
 \section*{Gaussian Mixture-model Expectation Maximization}
 
 
-\section*{Silhuette measures \& F1 scores}
+
+\section*{Silhouette measures \& F1 scores}
+To evaluate clustering performance, some sort of measure is useful. The $F_1$ score is based on simply evaluating the ratios of correctly clustered data points. The F$_1$ score is defined as,
+$$F_1 = 2 \frac{\text{precision} \cdot \text{recall}}{\text{precision} + \text{recall}},$$
+where precision is the ratio of selected elements which are relevant, while recall is the ratio of relevant elements being selected. The F$_1$ score is thus bound to the interval between $0$ and $1$, where $1$ denotes a perfect clustering. 
+
+F$_1$ scores for various clusterings performed with both K-means and EM-GM and a combination, where K-means is used to initialize GM-EM centers, can be seen in Figure \ref{fig:f1} and \ref{fig:combined_clustering}. To illustrate the variating results for some for some configurations all clustering has been performed $20$times and averaged. The standard deviation is marked for each such average. The clusters are assigned labels by voting of its assigned data points (supervised).
+
+
+The Silhouette is another clustering performance measure, which relies on a measure of similarity of points clustered. This allows for some evaluation of unsupervised clusterings. For Silhouette a similarity measure between two data points has to be chosen. For this exercise a measure of Euclidean distance has been used as such. Silhouette is calculated for each data point, and can then be averaged for each cluster, which again can be averaged to evaluate the clustering. For the $i$'th data point,
+$$ \text{silhouette}(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}},$$
+where the dissimilarity $a(i)$ is the average distance to all other data points in its cluster, and the dissimilarity $b(i)$ is the average distance to all data points in its nearest neighbouring cluster. This is fairly many computations when working with large data sets. The measure is bounded to the interval between $-1$ and $1$. A plot of Silhouette measures for various number of clusters $k$, can be seen in Figure \ref{fig:silhouette}. Naturally only positive silhouette measures is found for our clusters, since both clustering methods use distance for descissions. 
+
+Both measures indicate that $k=4$ is the most suitable for the data set. One of the three labels seems to be best described by two subclusters(when using K-means), or sum of two Gaussian distributions (when using GM-EM). Naturally only bad results occur with $k<3=\text{number of labels}$. 
 
 \begin{figure}
 	\centering
@@ -84,7 +97,7 @@ The individual pixels in an normal RGB image holds information about the intensi
 The space savings would be closely related to the size of a color set. And how few bits required for each pixel to index the color map. To further reduce the size, certain very closely related colors, could be said to yield same color, since small color variations can be almost impossible to notice to the human eye. This would add a quality loss to the compression, but often at a great reduction in color space. To create a color set, where similar colors are mapped together, K-means and GM-EM has been tried on the two test images shown in Figure \ref{fig:uncomp}. 
 
 A reasonable depth would be some $2^n$, where $n$ is the number of bits necessary for each pixel to reference the color map. In Figure \ref{fig:comp16} images are compressed to $2^4=16$ colors using both K-means and GM-EM. Likewise in Figure \ref{fig:comp256} images are compressed to $2^8=256$ colors using both K-means and GM-EM. The space savings relative to a raw 24bit bitmap approximate 
-$$\text{saving ratio} = \frac{3 \cdot \SI{8}{bit}- n \si{bit}}{3 \cdot\SI{8}{bit}},$$
+$$\text{saving ratio} \approx \frac{3 \cdot \SI{8}{bit}- n \si{bit}}{3 \cdot\SI{8}{bit}},$$
 for large images, where the additional space needed for the color map is negligible. For the $16$ and $256$ color maps, the savings are $83\%$ and $67\%$. 
 
 \begin{figure}
@@ -126,6 +139,6 @@ for large images, where the additional space needed for the color map is negligi
 	\label{fig:comp256}
 \end{figure}
 
-Image quality loss acceptance limit will always be subject to personal taste and dependent on purpose. Compression of images can be done in various ways, and is done most image formats used for photographs. 
+Image quality loss acceptance limit will always be subject to personal taste and dependent on purpose. Compression of images can be done in various ways, and is done most image formats used for photographs. Color depth compression with ie. K-means to determine optimal color map of a given size, is very computational demanding, and probably not very useful. A fixed colormap could decrease image quality, depending on how well the pixel colors matches the color map.
 
 \end{document}
