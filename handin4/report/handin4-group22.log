@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  18 DEC 2016 22:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  18 DEC 2016 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1292,7 +1292,17 @@ Package: l3keys2e 2016/05/18 v6512 LaTeX2e option processing using LaTeX3 keys
 Package: translator 2010/06/12 ver 1.10
 
 (c:/texlive/2016/texmf-dist/tex/latex/beamer/translator/translator-language-map
-pings.tex))) (./handin4-group22.aux)
+pings.tex))) (./handin4-group22.aux
+
+LaTeX Warning: Label `fig:orig' multiply defined.
+
+
+LaTeX Warning: Label `fig:km' multiply defined.
+
+
+LaTeX Warning: Label `fig:em' multiply defined.
+
+)
 \openout1 = `handin4-group22.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -1310,8 +1320,7 @@ LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 31.
-
-(c:/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
+ (c:/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1512,135 +1521,150 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 47.
+
+<original.png, id=4, 180.675pt x 179.16937pt>
+File: original.png Graphic file (type png)
+ <use original.png>
+Package pdftex.def Info: original.png used on input line 58.
+(pdftex.def)             Requested size: 341.0pt x 338.19174pt.
+
+<kmeans1.png, id=6, 532.99126pt x 185.19188pt>
+File: kmeans1.png Graphic file (type png)
+ <use kmeans1.png>
+Package pdftex.def Info: kmeans1.png used on input line 67.
+(pdftex.def)             Requested size: 341.0pt x 118.48564pt.
+
+<em1.png, id=8, 523.9575pt x 179.16937pt>
+File: em1.png Graphic file (type png)
+ <use em1.png>
+Package pdftex.def Info: em1.png used on input line 74.
+(pdftex.def)             Requested size: 341.0pt x 116.60907pt.
  [1
 
 
-{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<f1_vs_k.png, id=21, 859.2903pt x 235.6002pt>
+{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./original.
+png> <./kmeans1.png>]
+File: original.png Graphic file (type png)
+<use original.png>
+Package pdftex.def Info: original.png used on input line 91.
+(pdftex.def)             Requested size: 119.35208pt x 118.35876pt.
+File: kmeans1.png Graphic file (type png)
+ <use kmeans1.png>
+Package pdftex.def Info: kmeans1.png used on input line 100.
+(pdftex.def)             Requested size: 341.0pt x 118.48564pt.
+File: em1.png Graphic file (type png)
+ <use em1.png>
+Package pdftex.def Info: em1.png used on input line 107.
+(pdftex.def)             Requested size: 341.0pt x 116.60907pt.
+ [3 <./em1.png>] [4]
+<f1_vs_k.png, id=50, 859.2903pt x 235.6002pt>
 File: f1_vs_k.png Graphic file (type png)
  <use f1_vs_k.png>
-Package pdftex.def Info: f1_vs_k.png used on input line 82.
+Package pdftex.def Info: f1_vs_k.png used on input line 132.
 (pdftex.def)             Requested size: 341.0pt x 93.49425pt.
 
-<silhouette_vs_k.png, id=23, 859.2903pt x 235.6002pt>
+<silhouette_vs_k.png, id=52, 859.2903pt x 235.6002pt>
 File: silhouette_vs_k.png Graphic file (type png)
 
 <use silhouette_vs_k.png>
-Package pdftex.def Info: silhouette_vs_k.png used on input line 89.
+Package pdftex.def Info: silhouette_vs_k.png used on input line 139.
 (pdftex.def)             Requested size: 341.0pt x 93.49425pt.
 
-<combined_clustering.png, id=24, 859.2903pt x 235.6002pt>
+<combined_clustering.png, id=53, 859.2903pt x 235.6002pt>
 File: combined_clustering.png Graphic file (type png)
 
 <use combined_clustering.png>
-Package pdftex.def Info: combined_clustering.png used on input line 96.
+Package pdftex.def Info: combined_clustering.png used on input line 146.
 (pdftex.def)             Requested size: 341.0pt x 93.49425pt.
- [2] [3 <./f1_vs_k.png> <./silhouette_vs_k.png> <./combined_clustering.png>]
-<nygaard_facade.png, id=47, 169.1118pt x 112.7412pt>
+ [5] [6 <./f1_vs_k.png> <./silhouette_vs_k.png> <./combined_clustering.png>]
+<nygaard_facade.png, id=77, 169.1118pt x 112.7412pt>
 File: nygaard_facade.png Graphic file (type png)
  <use nygaard_facade.png>
-Package pdftex.def Info: nygaard_facade.png used on input line 113.
+Package pdftex.def Info: nygaard_facade.png used on input line 163.
 (pdftex.def)             Requested size: 167.09187pt x 111.39563pt.
 
-<nygaard_stairs.png, id=48, 169.1118pt x 112.7412pt>
+<nygaard_stairs.png, id=78, 169.1118pt x 112.7412pt>
 File: nygaard_stairs.png Graphic file (type png)
  <use nygaard_stairs.png>
-Package pdftex.def Info: nygaard_stairs.png used on input line 117.
+Package pdftex.def Info: nygaard_stairs.png used on input line 167.
 (pdftex.def)             Requested size: 167.09187pt x 111.39563pt.
 
+<img_facade_k16_kmeans.png, id=79, 386.6445pt x 260.8947pt>
+File: img_facade_k16_kmeans.png Graphic file (type png)
 
-LaTeX Warning: File `nygaard_facade_k16.png' not found on input line 126.
+<use img_facade_k16_kmeans.png>
+Package pdftex.def Info: img_facade_k16_kmeans.png used on input line 176.
+(pdftex.def)             Requested size: 167.09187pt x 112.74782pt.
+
+<img_stairs_k16d_kmeans.png, id=80, 386.6445pt x 260.8947pt>
+File: img_stairs_k16d_kmeans.png Graphic file (type png)
+
+<use img_stairs_k16d_kmeans.png>
+Package pdftex.def Info: img_stairs_k16d_kmeans.png used on input line 180.
+(pdftex.def)             Requested size: 167.09187pt x 112.74782pt.
 
 
-! Package pdftex.def Error: File `nygaard_facade_k16.png' not found.
+LaTeX Warning: File `img_facade_k256_kmeans.png' not found on input line 189.
+
+
+! Package pdftex.def Error: File `img_facade_k256_kmeans.png' not found.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 ...width=\textwidth]{nygaard_facade_k16.png}
+l.189 ...h=\textwidth]{img_facade_k256_kmeans.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 126.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 189.
 
 (c:/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
-LaTeX Warning: File `nygaard_stairs_k16.png' not found on input line 130.
+LaTeX Warning: File `img_stairs_k256_kmeans.png' not found on input line 193.
 
 
-! Package pdftex.def Error: File `nygaard_stairs_k16.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.130 ...width=\textwidth]{nygaard_stairs_k16.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `nygaard_facade_k256.png' not found on input line 139.
-
-
-! Package pdftex.def Error: File `nygaard_facade_k256.png' not found.
+! Package pdftex.def Error: File `img_stairs_k256_kmeans.png' not found.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 ...idth=\textwidth]{nygaard_facade_k256.png}
+l.193 ...h=\textwidth]{img_stairs_k256_kmeans.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-LaTeX Warning: File `nygaard_stairs_k256.png' not found on input line 143.
-
-
-! Package pdftex.def Error: File `nygaard_stairs_k256.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.143 ...idth=\textwidth]{nygaard_stairs_k256.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[4 <./nygaard_facade.png> <./nygaard_stairs.png>] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
+[7 <./nygaard_facade.png> <./nygaard_stairs.png> <./img_facade_k16_kmeans.png> 
+<./img_stairs_k16d_kmeans.png>] [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
  (./handin4-group22.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
 Package rerunfilecheck Info: File `handin4-group22.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 201.
  ) 
 Here is how much of TeX's memory you used:
- 21293 strings out of 493013
- 380590 string characters out of 6136993
- 451866 words of memory out of 5000000
- 24566 multiletter control sequences out of 15000+600000
+ 21328 strings out of 493013
+ 381167 string characters out of 6136993
+ 452016 words of memory out of 5000000
+ 24589 multiletter control sequences out of 15000+600000
  97599 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,78p,10389b,738s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2016
-/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2016/texmf-dist/fonts/enc/
+ 42i,11n,78p,10389b,742s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2016/tex
+mf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2016/texmf-dist/fonts/enc/
 dvips/lm/lm-rm.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 }<c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2016/
 texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/t
@@ -1650,10 +1674,10 @@ i7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/
 ts/type1/public/lm/lmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/l
 mri10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texl
 ive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on handin4-group22.pdf (5 pages, 1684298 bytes).
+Output written on handin4-group22.pdf (8 pages, 2012274 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 143 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
