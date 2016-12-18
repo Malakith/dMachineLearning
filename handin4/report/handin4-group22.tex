@@ -55,8 +55,8 @@
 During the assignment we have implemented the K-Means and GMM-EM, in order to part the data into clusters. The following plot show the result of a run with both the EM and the K-means algorithm.
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{original.png}
-	\caption{}
+	\includegraphics[width=0.35\textwidth]{original.png}
+	\caption{Original classification of datapoints.}
 	\label{fig:orig}
 \end{figure}
 The main difference between k-means and GMM-EM, is the fact that K-Means work only with hard distances, and GMM work with Gaussian distributions. The effect of this, is that in K-Means, you are always associated with whatever mean is closest to you. So all points are clustered by small "spheres" around the centers found via K-Means. That means outliers are often placed in the wrong clusters. On the other hand, the clusters from the GMM-EM algorithm doesnt have to be convex. Because of that, GMM-EM is better at clustering outliers.
@@ -65,14 +65,14 @@ In \ref{fig:orig} above we see the actual classification of the data, where we h
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{kmeans1.png}
-	\caption{}
+	\caption{K-means clustering of datapoints.}
 	\label{fig:km}
 \end{figure}
 Here in \ref{fig:km} we see three different runs of the k-means algorithm. We see how different the results are. This is because k-means is relient on which starting conditions you initiate it with. What points it chooses when starting, for the first centers.
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{em1.png}
-	\caption{}
+	\caption{GMM-EM clustering of datapoints.}
 	\label{fig:em}
 \end{figure}
 In \ref{fig:em} we see three different runs of the em algorithm. Again we see the results differ quite a bit. We even misclassify some datapoint in the blue group, which would not be possible with the kmeans algorithm, since the blue points are fairly isolated. This also reflects the weakness that the em algorithm is dependent on a good choice of starting means.
