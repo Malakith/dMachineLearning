@@ -42,7 +42,7 @@
 	\maketitle
 
 
-\subsection{Requirements from Ira's description}\\
+\subsection{Requirements from Ira's description}
 \begin{itemize}
 	\item The status of the work, i.e., does it work, if not, then why.
 	\item A discussion of plots of at least two runs of your algorithm implementations detailing what you can see. Make sure that you relate this to the discussion in the lecture or textbook about the strengths and weaknesses of the algorithms.
@@ -55,5 +55,47 @@
 \section*{Gaussian Mixture-model Expectation Maximization}
 
 \section*{Image color compression example}
+The individual pixels in an normal RGB image holds information about the intensity of the three color channels. The color depth is given by the possible color combinations, which is usually 24 bit; 8 bit for each color channel. In a normal picture far from all possibilities af colors are present, so much of the color depth is unused. By limiting the number of possible colors to a small sub set of the full color depth, and thus let each pixel refer to a color in this color set, disk usage can be decreased significantly. The color compression would then be a algorithm deciding a color set and transform each pixel as to refer these. Likewise a decompression algorithm would then do the reverse transformation by looking up each pixels reference color. So the space savings comes at two additional computational costs.
+
+The space savings would be closely related to the size of a color set. And how few bits required for each pixel to index the color map. To further reduce the size, certain very closely related colors, could be said to yield same color, since small color variations can be almost impossible to notice to the human eye. This would add a quality loss to the compression, but often at a great reduction in color space. To create a color set, where similar colors are mapped together, K-means and GM-EM has been tried on the two test images shown in Figure \ref{fig:uncomp}. 
+
+\begin{figure}
+	\centering
+	\begin{minipage}{.48\textwidth}
+		\includegraphics[width=\textwidth]{nygaard_facade.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{.48\textwidth}
+		\includegraphics[width=\textwidth]{nygaard_stairs.png}
+	\end{minipage}
+	\caption{Uncompressed \emph{nygaard\_facade.jpg} and \emph{nygaard\_stairs.jpg} images.}
+	\label{fig:uncomp}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{minipage}{.48\textwidth}
+		\includegraphics[width=\textwidth]{nygaard_facade_k16.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{.48\textwidth}
+		\includegraphics[width=\textwidth]{nygaard_stairs_k16.png}
+	\end{minipage}
+	\caption{Images with color depth compressed to a set of 16 colors (4bit).}
+	\label{fig:comp16}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{minipage}{.48\textwidth}
+		\includegraphics[width=\textwidth]{nygaard_facade_k256.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{.48\textwidth}
+		\includegraphics[width=\textwidth]{nygaard_stairs_k256.png}
+	\end{minipage}
+	\caption{Images with color depth compressed to a set of 256 colors (8bit).}
+	\label{fig:comp256}
+\end{figure}
 
 \end{document}
