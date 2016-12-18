@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  18 DEC 2016 19:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  18 DEC 2016 19:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1516,20 +1516,58 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 
 
 {c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<nygaard_facade.png, id=19, 169.1118pt x 112.7412pt>
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! siunitx error: "invalid-token-in-number"
+! 
+! Invalid token 'n' in numerical input.
+! 
+! See the siunitx documentation for further information.
+! 
+! For immediate help type H <return>.
+!...............................................  
+                                                  
+l.63 ...I{8}{bit}-\SI{n}{bit}}{3 \cdot\SI{8}{bit}}
+                                                  ,$$
+|'''''''''''''''''''''''''''''''''''''''''''''''
+| Numbers can only contain tokens defined using the 'input-...' options:
+| the token 'n' is not set up as a valid part of a number.
+|...............................................
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! siunitx error: "invalid-number"
+! 
+! Invalid numerical input 'n'.
+! 
+! See the siunitx documentation for further information.
+! 
+! For immediate help type H <return>.
+!...............................................  
+                                                  
+l.63 ...I{8}{bit}-\SI{n}{bit}}{3 \cdot\SI{8}{bit}}
+                                                  ,$$
+|'''''''''''''''''''''''''''''''''''''''''''''''
+| The input given as a number does not make logical sense. This happens, for
+| example, if a number only contains a sign.
+|...............................................
+
+<nygaard_facade.png, id=21, 169.1118pt x 112.7412pt>
 File: nygaard_facade.png Graphic file (type png)
  <use nygaard_facade.png>
-Package pdftex.def Info: nygaard_facade.png used on input line 65.
+Package pdftex.def Info: nygaard_facade.png used on input line 69.
 (pdftex.def)             Requested size: 163.67854pt x 109.11969pt.
 
-<nygaard_stairs.png, id=21, 169.1118pt x 112.7412pt>
+<nygaard_stairs.png, id=23, 169.1118pt x 112.7412pt>
 File: nygaard_stairs.png Graphic file (type png)
  <use nygaard_stairs.png>
-Package pdftex.def Info: nygaard_stairs.png used on input line 69.
+Package pdftex.def Info: nygaard_stairs.png used on input line 73.
 (pdftex.def)             Requested size: 163.67854pt x 109.11969pt.
 
 
-LaTeX Warning: File `nygaard_facade_k16.png' not found on input line 78.
+LaTeX Warning: File `nygaard_facade_k16.png' not found on input line 82.
 
 
 ! Package pdftex.def Error: File `nygaard_facade_k16.png' not found.
@@ -1538,18 +1576,18 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.78 ...[width=\textwidth]{nygaard_facade_k16.png}
+l.82 ...[width=\textwidth]{nygaard_facade_k16.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 78.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 82.
 (c:/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
-LaTeX Warning: File `nygaard_stairs_k16.png' not found on input line 82.
+LaTeX Warning: File `nygaard_stairs_k16.png' not found on input line 86.
 
 
 ! Package pdftex.def Error: File `nygaard_stairs_k16.png' not found.
@@ -1558,14 +1596,14 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.82 ...[width=\textwidth]{nygaard_stairs_k16.png}
+l.86 ...[width=\textwidth]{nygaard_stairs_k16.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `nygaard_facade_k256.png' not found on input line 91.
+LaTeX Warning: File `nygaard_facade_k256.png' not found on input line 95.
 
 
 ! Package pdftex.def Error: File `nygaard_facade_k256.png' not found.
@@ -1574,14 +1612,14 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 ...width=\textwidth]{nygaard_facade_k256.png}
+l.95 ...width=\textwidth]{nygaard_facade_k256.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `nygaard_stairs_k256.png' not found on input line 95.
+LaTeX Warning: File `nygaard_stairs_k256.png' not found on input line 99.
 
 
 ! Package pdftex.def Error: File `nygaard_stairs_k256.png' not found.
@@ -1590,45 +1628,49 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.95 ...width=\textwidth]{nygaard_stairs_k256.png}
+l.99 ...width=\textwidth]{nygaard_stairs_k256.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [2 <./nygaard_facade.png> <./nygaard_stairs.png>] [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
  (./handin4-group22.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
 Package rerunfilecheck Info: File `handin4-group22.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  ) 
 Here is how much of TeX's memory you used:
- 21265 strings out of 493013
- 380132 string characters out of 6136993
- 450549 words of memory out of 5000000
- 24550 multiletter control sequences out of 15000+600000
- 91626 words of font info for 86 fonts, out of 8000000 for 9000
+ 21268 strings out of 493013
+ 380157 string characters out of 6136993
+ 450653 words of memory out of 5000000
+ 24551 multiletter control sequences out of 15000+600000
+ 97599 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,10n,78p,10389b,732s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2016/tex
-mf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}<c:/texlive/2016/texmf-dist/fonts/type
-1/public/lm/lmbx10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12
-.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/20
-16/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2016/texmf-dist/fonts
-/type1/public/lm/lmri10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/l
-msy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on handin4-group22.pdf (3 pages, 1557298 bytes).
+{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2016/tex
+mf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2016/texmf-dist/fonts/enc/
+dvips/lm/lm-ec.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+}<c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2016/
+texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/t
+ype1/public/lm/lmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmm
+i7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/
+2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2016/texmf-dist/fon
+ts/type1/public/lm/lmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/l
+mri10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texl
+ive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on handin4-group22.pdf (3 pages, 1587842 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  11 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
