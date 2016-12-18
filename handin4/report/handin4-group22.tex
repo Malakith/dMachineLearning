@@ -59,9 +59,9 @@ The individual pixels in an normal RGB image holds information about the intensi
 
 The space savings would be closely related to the size of a color set. And how few bits required for each pixel to index the color map. To further reduce the size, certain very closely related colors, could be said to yield same color, since small color variations can be almost impossible to notice to the human eye. This would add a quality loss to the compression, but often at a great reduction in color space. To create a color set, where similar colors are mapped together, K-means and GM-EM has been tried on the two test images shown in Figure \ref{fig:uncomp}. 
 
-A reasonable depth would be some $2^n$, where $n$ is the number of bits neccesary for each pixel to reference the color map. In Figure \ref{fig:comp16} images are compressed to $2^4=16$ colors using both K-means and GM-EM. Likewise in Figure \ref{fig:comp256} images are compressed to $2^8=256$ colors using both K-means and GM-EM. The space savings relativ to a raw 24bit bitmap approximate 
-$$\frac{3 \cdot \SI{8}{bit}-\SI{n}{bit}}{3 \cdot\SI{8}{bit}},$$
-for large images, where the additional space needee for the color map is negligible. For the $16$ and $256$ color maps, the savings are $83\%$ and $67\%$. 
+A reasonable depth would be some $2^n$, where $n$ is the number of bits necessary for each pixel to reference the color map. In Figure \ref{fig:comp16} images are compressed to $2^4=16$ colors using both K-means and GM-EM. Likewise in Figure \ref{fig:comp256} images are compressed to $2^8=256$ colors using both K-means and GM-EM. The space savings relative to a raw 24bit bitmap approximate 
+$$\text{saving ratio} = \frac{3 \cdot \SI{8}{bit}- n \si{bit}}{3 \cdot\SI{8}{bit}},$$
+for large images, where the additional space needed for the color map is negligible. For the $16$ and $256$ color maps, the savings are $83\%$ and $67\%$. 
 
 \begin{figure}
 	\centering

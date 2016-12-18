@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  18 DEC 2016 19:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  18 DEC 2016 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1516,44 +1516,6 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 
 
 {c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!
-! siunitx error: "invalid-token-in-number"
-! 
-! Invalid token 'n' in numerical input.
-! 
-! See the siunitx documentation for further information.
-! 
-! For immediate help type H <return>.
-!...............................................  
-                                                  
-l.63 ...I{8}{bit}-\SI{n}{bit}}{3 \cdot\SI{8}{bit}}
-                                                  ,$$
-|'''''''''''''''''''''''''''''''''''''''''''''''
-| Numbers can only contain tokens defined using the 'input-...' options:
-| the token 'n' is not set up as a valid part of a number.
-|...............................................
-
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!
-! siunitx error: "invalid-number"
-! 
-! Invalid numerical input 'n'.
-! 
-! See the siunitx documentation for further information.
-! 
-! For immediate help type H <return>.
-!...............................................  
-                                                  
-l.63 ...I{8}{bit}-\SI{n}{bit}}{3 \cdot\SI{8}{bit}}
-                                                  ,$$
-|'''''''''''''''''''''''''''''''''''''''''''''''
-| The input given as a number does not make logical sense. This happens, for
-| example, if a number only contains a sign.
-|...............................................
-
 <nygaard_facade.png, id=21, 169.1118pt x 112.7412pt>
 File: nygaard_facade.png Graphic file (type png)
  <use nygaard_facade.png>
@@ -1642,16 +1604,12 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
 Package rerunfilecheck Info: File `handin4-group22.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  ) 
 Here is how much of TeX's memory you used:
  21268 strings out of 493013
  380157 string characters out of 6136993
- 450653 words of memory out of 5000000
+ 450761 words of memory out of 5000000
  24551 multiletter control sequences out of 15000+600000
  97599 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1667,7 +1625,7 @@ i7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/
 ts/type1/public/lm/lmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/l
 mri10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texl
 ive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on handin4-group22.pdf (3 pages, 1587842 bytes).
+Output written on handin4-group22.pdf (3 pages, 1587883 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream
