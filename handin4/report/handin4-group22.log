@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  18 DEC 2016 23:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.22)  18 DEC 2016 23:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1514,166 +1514,137 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 43.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 43.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 47.
-
-(c:/texlive/2016/texmf-dist/tex/latex/lm/omslmr.fd
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 47.
 
 <original.png, id=4, 180.675pt x 179.16937pt>
 File: original.png Graphic file (type png)
  <use original.png>
-Package pdftex.def Info: original.png used on input line 58.
-(pdftex.def)             Requested size: 341.0pt x 338.19174pt.
+Package pdftex.def Info: original.png used on input line 49.
+(pdftex.def)             Requested size: 119.35208pt x 118.35876pt.
 
 <kmeans1.png, id=6, 532.99126pt x 185.19188pt>
 File: kmeans1.png Graphic file (type png)
  <use kmeans1.png>
-Package pdftex.def Info: kmeans1.png used on input line 67.
+Package pdftex.def Info: kmeans1.png used on input line 58.
 (pdftex.def)             Requested size: 341.0pt x 118.48564pt.
 
-
-LaTeX Warning: File `em.png' not found on input line 74.
-
-
-! Package pdftex.def Error: File `em.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.74 	\includegraphics[width=\textwidth]{em.png}
-                                                
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 74.
-(c:/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [1
-
-
-{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./original.
-png> <./kmeans1.png>]
-[3]
-File: original.png Graphic file (type png)
- <use original.png>
-Package pdftex.def Info: original.png used on input line 91.
-(pdftex.def)             Requested size: 119.35208pt x 118.35876pt.
-File: kmeans1.png Graphic file (type png)
- <use kmeans1.png>
-Package pdftex.def Info: kmeans1.png used on input line 100.
-(pdftex.def)             Requested size: 341.0pt x 118.48564pt.
-
-<em1.png, id=41, 523.9575pt x 179.16937pt>
+<em1.png, id=8, 523.9575pt x 179.16937pt>
 File: em1.png Graphic file (type png)
  <use em1.png>
-Package pdftex.def Info: em1.png used on input line 107.
+Package pdftex.def Info: em1.png used on input line 65.
 (pdftex.def)             Requested size: 341.0pt x 116.60907pt.
- [4] [5 <./em1.png>]
-<f1_vs_k.png, id=59, 859.2903pt x 235.6002pt>
-File: f1_vs_k.png Graphic file (type png)
- <use f1_vs_k.png>
-Package pdftex.def Info: f1_vs_k.png used on input line 132.
-(pdftex.def)             Requested size: 341.0pt x 93.49425pt.
+ [1
 
-<silhouette_vs_k.png, id=61, 859.2903pt x 235.6002pt>
+
+{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./original.png>
+] [2 <./kmeans1.png> <./em1.png>] [3] <f1_vs_k.png, id=49, 859.2903pt x 235.600
+2pt>
+File: f1_vs_k.png Graphic file (type png)
+
+<use f1_vs_k.png>
+Package pdftex.def Info: f1_vs_k.png used on input line 107.
+(pdftex.def)             Requested size: 341.0pt x 93.49425pt.
+ <silhouette_vs_k.png, id=51, 859.2903pt x 235.6002pt>
 File: silhouette_vs_k.png Graphic file (type png)
 
 <use silhouette_vs_k.png>
-Package pdftex.def Info: silhouette_vs_k.png used on input line 139.
+Package pdftex.def Info: silhouette_vs_k.png used on input line 114.
 (pdftex.def)             Requested size: 341.0pt x 93.49425pt.
 
-<combined_clustering.png, id=62, 859.2903pt x 235.6002pt>
+<combined_clustering.png, id=52, 859.2903pt x 235.6002pt>
 File: combined_clustering.png Graphic file (type png)
 
 <use combined_clustering.png>
-Package pdftex.def Info: combined_clustering.png used on input line 146.
+Package pdftex.def Info: combined_clustering.png used on input line 121.
 (pdftex.def)             Requested size: 341.0pt x 93.49425pt.
- [6 <./f1_vs_k.png> <./silhouette_vs_k.png> <./combined_clustering.png>] <nygaa
-rd_facade_org.png, id=75, 382.42876pt x 256.96pt>
+ [4 <./f1_vs_k.png> <./silhouette_vs_k.png> <./combined_clustering.png>] <nygaa
+rd_facade_org.png, id=65, 382.42876pt x 256.96pt>
 File: nygaard_facade_org.png Graphic file (type png)
 
 <use nygaard_facade_org.png>
-Package pdftex.def Info: nygaard_facade_org.png used on input line 163.
+Package pdftex.def Info: nygaard_facade_org.png used on input line 138.
 (pdftex.def)             Requested size: 167.09187pt x 112.27072pt.
 
-<nygaard_stairs_org.png, id=76, 382.42876pt x 256.96pt>
+<nygaard_stairs_org.png, id=66, 382.42876pt x 256.96pt>
 File: nygaard_stairs_org.png Graphic file (type png)
 
 <use nygaard_stairs_org.png>
-Package pdftex.def Info: nygaard_stairs_org.png used on input line 167.
+Package pdftex.def Info: nygaard_stairs_org.png used on input line 142.
 (pdftex.def)             Requested size: 167.09187pt x 112.27072pt.
 
-<nygaard_facade_k16.png, id=77, 386.6445pt x 260.8947pt>
+<nygaard_facade_k16.png, id=67, 386.6445pt x 260.8947pt>
 File: nygaard_facade_k16.png Graphic file (type png)
 
 <use nygaard_facade_k16.png>
-Package pdftex.def Info: nygaard_facade_k16.png used on input line 176.
+Package pdftex.def Info: nygaard_facade_k16.png used on input line 151.
 (pdftex.def)             Requested size: 167.09187pt x 112.74782pt.
 
-<nygaard_stairs_k16.png, id=78, 386.6445pt x 260.8947pt>
+<nygaard_stairs_k16.png, id=68, 386.6445pt x 260.8947pt>
 File: nygaard_stairs_k16.png Graphic file (type png)
 
 <use nygaard_stairs_k16.png>
-Package pdftex.def Info: nygaard_stairs_k16.png used on input line 180.
+Package pdftex.def Info: nygaard_stairs_k16.png used on input line 155.
 (pdftex.def)             Requested size: 167.09187pt x 112.74782pt.
 
-<nygaard_facade_k256.png, id=79, 386.6445pt x 260.8947pt>
+<nygaard_facade_k256.png, id=69, 386.6445pt x 260.8947pt>
 File: nygaard_facade_k256.png Graphic file (type png)
 
 <use nygaard_facade_k256.png>
-Package pdftex.def Info: nygaard_facade_k256.png used on input line 189.
+Package pdftex.def Info: nygaard_facade_k256.png used on input line 164.
 (pdftex.def)             Requested size: 167.09187pt x 112.74782pt.
 
-<nygaard_stairs_k256.png, id=80, 386.6445pt x 260.8947pt>
+<nygaard_stairs_k256.png, id=70, 386.6445pt x 260.8947pt>
 File: nygaard_stairs_k256.png Graphic file (type png)
 
 <use nygaard_stairs_k256.png>
-Package pdftex.def Info: nygaard_stairs_k256.png used on input line 193.
+Package pdftex.def Info: nygaard_stairs_k256.png used on input line 168.
 (pdftex.def)             Requested size: 167.09187pt x 112.74782pt.
- [7 <./nygaard_facade_org.png> <./nygaard_stairs_org.png>] [8 <./nygaard_facade
+ [5 <./nygaard_facade_org.png> <./nygaard_stairs_org.png>] [6 <./nygaard_facade
 _k16.png> <./nygaard_stairs_k16.png> <./nygaard_facade_k256.png> <./nygaard_sta
 irs_k256.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
  (./handin4-group22.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 176.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
 Package rerunfilecheck Info: File `handin4-group22.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 201.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
  ) 
 Here is how much of TeX's memory you used:
- 21336 strings out of 493013
- 381396 string characters out of 6136993
- 452016 words of memory out of 5000000
- 24597 multiletter control sequences out of 15000+600000
- 97599 words of font info for 88 fonts, out of 8000000 for 9000
+ 21274 strings out of 493013
+ 380445 string characters out of 6136993
+ 451016 words of memory out of 5000000
+ 24546 multiletter control sequences out of 15000+600000
+ 94285 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,78p,10389b,736s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2016
-/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2016/texmf-dist/fonts/enc/
-dvips/lm/lm-rm.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-}<c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2016/
-texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/t
-ype1/public/lm/lmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmm
-i7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/
-2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2016/texmf-dist/fon
-ts/type1/public/lm/lmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/l
-mri10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texl
-ive/2016/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on handin4-group22.pdf (8 pages, 1563533 bytes).
+ 42i,11n,78p,10389b,734s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.0.12} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.0.11} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.0.10} has been referenced but does not exist
+, replaced by a fixed one
+
+{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2016/t
+exmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2016/texmf-dist/fonts/en
+c/dvips/lm/lm-rm.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<
+c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2016/te
+xmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/typ
+e1/public/lm/lmmi7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr10.
+pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/201
+6/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2016/texmf-dist/fonts/t
+ype1/public/lm/lmri10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lms
+y10.pfb>
+Output written on handin4-group22.pdf (6 pages, 1519068 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
+ 24 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
