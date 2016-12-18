@@ -68,7 +68,7 @@ The Silhouette is another clustering performance measure, which relies on a meas
 $$ \text{silhouette}(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}},$$
 where the dissimilarity $a(i)$ is the average distance to all other data points in its cluster, and the dissimilarity $b(i)$ is the average distance to all data points in its nearest neighbouring cluster. This is fairly many computations when working with large data sets. The measure is bounded to the interval between $-1$ and $1$. A plot of Silhouette measures for various number of clusters $k$, can be seen in Figure \ref{fig:silhouette}. Naturally only positive silhouette measures is found for our clusters, since both clustering methods use distance for descissions. 
 
-Both measures indicate that $k=4$ is the most suitable for the data set. One of the three labels seems to be best described by two subclusters(when using K-means), or sum of two Gaussian distributions (when using GM-EM). Naturally only bad results occur with $k<3=\text{number of labels}$. 
+Both measures indicate that $k=4$ is the most suitable for the data set. Here the average measures is high, and the results stable (low deviation between iterations). So it can be concluded that one of the three labels seems to be best described by two subclusters(when using K-means), or sum of two Gaussian distributions (when using GM-EM). Naturally only bad results occur with $k<3=\text{number of labels}$. 
 
 \begin{figure}
 	\centering
